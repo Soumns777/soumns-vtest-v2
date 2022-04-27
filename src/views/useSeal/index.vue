@@ -278,8 +278,9 @@ export default {
     },
 
     jumpTo() {
-      this.$store.commit(`User/${SET_SEARCH_TYPE}`, AUDITING)
-      this.$router.push({ path: '/search' })
+      console.log('🍊 搜索')
+      // this.$store.commit(`User/${SET_SEARCH_TYPE}`, AUDITING)
+      // this.$router.push({ path: '/search' })
     },
 
     setMinWidth(val) {
@@ -500,6 +501,7 @@ export default {
 
       .container-top-search-inp {
         margin-left: 30px;
+        z-index: 99;
         .van-search {
           background: #f9f9f9;
           border-radius: 34px;
