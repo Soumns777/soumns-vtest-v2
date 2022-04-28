@@ -14,6 +14,11 @@ const routes = [
     name: 'useSeal',
     path: '/useSeal',
     component: () => import('@/views/useSeal/index.vue')
+  },
+  {
+    name: 'test',
+    path: '/test',
+    component: () => import('@/views/useSeal/test.vue')
   }
 ]
 

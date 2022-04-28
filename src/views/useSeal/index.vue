@@ -66,7 +66,7 @@
               <div class="container-history-eval-top-img1">
                 <img src="@/assets/uploads/yongyin-icon.png" alt="" />
               </div>
-              <div class="container-history-eval-top-text">用印申请{{ item.approvalNumber }}</div>
+              <span class="container-history-eval-top-text">用印申请{{ item.approvalNumber }}</span>
 
               <div class="container-history-eval-top-img2" v-if="item.billStatus == documentStatus.AUDITING">
                 <img src="@/assets/uploads/yongyin-shenpizhong.png" alt="" />
@@ -695,7 +695,6 @@ export default {
 
         .container-history-eval-top-text {
           width: 500px;
-          height: 42px;
           color: #343333;
           font-size: 30px;
 
