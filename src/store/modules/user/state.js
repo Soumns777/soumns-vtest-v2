@@ -1,3 +1,6 @@
 export default {
-  user: {}
+  user: {
+    name: 'iu',
+    age: 18
+  }
 }
