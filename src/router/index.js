@@ -7,7 +7,7 @@ const routes = [
   {
     path: '/',
     redirect: {
-      name: 'useSeal'
+      name: 'payRequest'
     }
   },
   {
@@ -16,9 +16,14 @@ const routes = [
     component: () => import('@/views/useSeal/index.vue')
   },
   {
-    name: 'test',
-    path: '/test',
+    name: 'useSealTest',
+    path: '/useSealTest',
     component: () => import('@/views/useSeal/test.vue')
+  },
+  {
+    name: 'payRequest',
+    path: '/payRequest',
+    component: () => import('@/views/payRequest/index.vue')
   }
 ]
 

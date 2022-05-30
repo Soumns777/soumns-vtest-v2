@@ -7,9 +7,9 @@ import Vant from 'vant'
 import 'vant/lib/index.css'
 
 // 引入Vconsole
-import Vconsole from 'vconsole'
-const vConsole = new Vconsole()
-Vue.use(vConsole)
+// import Vconsole from 'vconsole'
+// const vConsole = new Vconsole()
+// Vue.use(vConsole)
 
 import iphoneXBottom from '@/mixins/iphoneXBottomSetAside'
 
