@@ -7,7 +7,7 @@ const routes = [
   {
     path: '/',
     redirect: {
-      name: 'payRequest'
+      name: 'useSealTest'
     }
   },
   {
