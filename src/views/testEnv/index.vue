@@ -10,6 +10,8 @@
     </van-field>
 
     <Son :content.sync="CONTRACT_NAME"></Son>
+
+    <button class="rem-class">测试rem</button>
   </div>
 </template>
 
@@ -42,13 +44,16 @@ export default {
   color: #969799;
 }
 
-// ::v-deep .van-cell {
-//   color: #df5d5a;
-//   margin: 0 10px;
-// }
-
 ::v-deep .van-field__left-icon {
   color: #df5d5a;
   margin: 0 10px;
+}
+
+.rem-class {
+  width: 5.33rem;
+  height: 5.33rem;
+
+  width: 5.33rem;
+  background-color: #ff6100;
 }
 </style>
