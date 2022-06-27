@@ -5,7 +5,7 @@ module.exports = {
   productionSourceMap: false, // 是否生产sourceMap
   outputDir: 'dist/www', // 生成的生产环境
   devServer: {
-    open: true,
+    open: false,
     https: false,
     port: 8081,
     host: '0.0.0.0'
@@ -22,6 +22,9 @@ module.exports = {
   css: {
     loaderOptions: {
       css: {},
+      postcss: {
+        plugins: [require('tailwindcss'), require('autoprefixer')]
+      },
       sass: {
         prependData: '@import "@/assets/css/sass/index.scss";' // sass-loader@7 以上版本需要用 prependData
       }

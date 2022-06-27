@@ -7,7 +7,7 @@ const routes = [
   {
     path: '/',
     redirect: {
-      name: 'testEnv'
+      name: 'testRem'
     }
   },
   {
@@ -30,6 +30,11 @@ const routes = [
     name: 'testEnv',
     path: '/testEnv',
     component: () => import('@/views/testEnv/index.vue')
+  },
+  {
+    name: 'testRem',
+    path: '/testRem',
+    component: () => import('@/views/testRem/index.vue')
   }
 ]
 
