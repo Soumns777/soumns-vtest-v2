@@ -6,8 +6,6 @@ import store from './store'
 import Vant from 'vant'
 import 'vant/lib/index.css'
 
-import 'tailwindcss/tailwind.css'
-
 // 引入Vconsole
 // import Vconsole from 'vconsole'
 // const vConsole = new Vconsole()

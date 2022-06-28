@@ -1,6 +1,6 @@
 <template>
   <!-- w-100% h-300px bg-red-400 -->
-  <div class="container w-100% h-auto bg-red-400">11</div>
+  <div class="container">11</div>
 </template>
 
 <script>

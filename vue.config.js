@@ -22,9 +22,6 @@ module.exports = {
   css: {
     loaderOptions: {
       css: {},
-      postcss: {
-        plugins: [require('tailwindcss'), require('autoprefixer')]
-      },
       sass: {
         prependData: '@import "@/assets/css/sass/index.scss";' // sass-loader@7 以上版本需要用 prependData
       }
