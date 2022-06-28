@@ -1,6 +1,9 @@
 <template>
-  <!-- w-100% h-300px bg-red-400 -->
-  <div class="container">11</div>
+  <div class="w-1/2 h-screen bg-red-400">
+    <div>11</div>
+
+    <div>22</div>
+  </div>
 </template>
 
 <script>
