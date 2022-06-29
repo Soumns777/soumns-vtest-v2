@@ -1,5 +1,5 @@
 <template>
-  <div class="w-1/2 h-screen bg-red-400">
+  <div class="w-screen h-screen bg-red-400">
     <div>11</div>
 
     <div>22</div>
