@@ -1,7 +1,13 @@
 <template>
   <div>
     <div v-if="getList.PAY_ACCOUNTS.length > 0">
-      <van-cell-group v-for="(item, idx) in getList.PAY_ACCOUNTS" :key="idx" :title="`收款方式${idx + 1}`">
+      <van-cell-group v-for="(item, idx) in getList.PAY_ACCOUNTS" :key="idx">
+        <template #title>
+          <div @click="item.showPayRequest = !item.showPayRequest">
+            {{ `收款方式${idx + 1}` }}
+          </div>
+        </template>
+
         <van-icon name="arrow-up" class="group-icon" @click="item.showPayRequest = !item.showPayRequest" v-if="item.showPayRequest" />
         <van-icon name="arrow-down" class="group-icon" @click="item.showPayRequest = !item.showPayRequest" v-else />
 
@@ -55,7 +61,7 @@ export default {
           PAY_REQ_ID: '5899d65f-2b8a-4972-a948-ac9ebab16737'
         },
         {
-          PLAN_DATE: '2022-05-27',
+          PLAN_DATE: '2022-05-28',
           RECEIVE_BANK_ACCOUNT_ID: 'a6bf1ff5-6c92-4e20-b049-c5f52c43759c',
           PAYEE_NAME: '新奥集团',
           PAY_TYPE: '转账',
@@ -82,7 +88,7 @@ export default {
       })
     }
   },
-  mounted() {
+  created() {
     this.init()
   }
 }
