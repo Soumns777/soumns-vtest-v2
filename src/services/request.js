@@ -5,32 +5,13 @@
 import soumnsHttp from '@/libs/http'
 
 /**
- * @method getMock
- * @param 无
- * @returns
- * {
- *  RESULT_MES {string }
- *  msg {string}
- *  status {number}
- * }
- * @desc 测试封装api的get请求
+ * 上传图片
  */
 
-export const getMock = (params) => {
-  return soumnsHttp.get('/getMock', params)
-}
-
-/**
- * @method postMock
- * @param 无
- * @returns
- * {
- *  RESULT_MES {string }
- *  msg {string}
- *  status {number}
- * }
- * @desc 测试封装api的post请求
- */
-export const postMock = (params) => {
-  return soumnsHttp.post('/postMock', params)
+export const uploadImgs = (params) => {
+  return soumnsHttp.post('/api/upload-images', params, {
+    headers: {
+      'Content-Type': 'multipart/form-data;charset=UTF-8'
+    }
+  })
 }

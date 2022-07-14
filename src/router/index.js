@@ -7,7 +7,7 @@ const routes = [
   {
     path: '/',
     redirect: {
-      name: 'payRequest'
+      name: 'uploadImg'
     }
   },
   {
@@ -35,6 +35,11 @@ const routes = [
     name: 'testRem',
     path: '/testRem',
     component: () => import('@/views/testRem/index.vue')
+  },
+  {
+    name: 'uploadImg',
+    path: '/uploadImg',
+    component: () => import('@/views/uploadImg/index.vue')
   }
 ]
 
