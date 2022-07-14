@@ -21,6 +21,10 @@
         </div>
       </van-cell-group>
     </div>
+
+    <van-cell title="单元格" value="内容" />
+
+    <van-field label="审核岗推翻理由" v-model="getList.AUDIT_OPPOSITION_REASON" input-align="right" disabled autosize rows="1" type="textarea" class="field"> </van-field>
   </div>
 </template>
 
@@ -30,8 +34,10 @@ export default {
   data() {
     return {
       console,
+      filedValue: '内容',
       getList: {
-        PAY_ACCOUNTS: []
+        PAY_ACCOUNTS: [],
+        AUDIT_OPPOSITION_REASON: '12adadasdasdasdad'
       }
     }
   },
@@ -103,6 +109,26 @@ export default {
     width: 40px;
     height: 40px;
     z-index: 200;
+  }
+}
+
+.field {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+::v-deep .van-field__control:disabled,
+::v-deep .van-field__control {
+  color: #979799;
+  -webkit-text-fill-color: red;
+}
+
+::v-deep .van-field--disabled,
+::v-deep .van-field__label {
+  span {
+    // color: #333233;
+    color: red;
   }
 }
 </style>
