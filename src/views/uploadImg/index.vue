@@ -7,7 +7,8 @@
 <script>
 import { Toast } from 'vant'
 
-import { uploadImgs } from '@/services/request'
+import { uploadImgs, Login } from '@/services/request'
+
 export default {
   name: 'uploadImg',
   data() {
@@ -15,7 +16,9 @@ export default {
       fileList: []
     }
   },
-  mounted() {},
+  mounted() {
+    this.init()
+  },
   watch: {
     fileList() {
       console.log(this.fileList, '💛💙 fileList')
@@ -33,6 +36,14 @@ export default {
       if (RESULT_CODE === '0000') {
         return Toast.success('上传图片成功!')
       }
+    },
+
+    async init() {
+      const { data: res } = await Login({
+        userName: 'admin',
+        password: '123'
+      })
+      console.log(res, '💛💙 init login')
     }
   }
 }

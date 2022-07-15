@@ -3,15 +3,16 @@
  */
 
 import soumnsHttp from '@/libs/http'
+import { FORM_DATA_HEADER } from '@/utils/constant'
 
 /**
  * 上传图片
  */
 
 export const uploadImgs = (params) => {
-  return soumnsHttp.post('/api/upload-images', params, {
-    headers: {
-      'Content-Type': 'multipart/form-data;charset=UTF-8'
-    }
-  })
+  return soumnsHttp.post('/api/upload-images', params, FORM_DATA_HEADER)
+}
+
+export const Login = (params) => {
+  return soumnsHttp.get('/api/login', params)
 }

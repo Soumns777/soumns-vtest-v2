@@ -20,7 +20,7 @@ const { log } = require('console')
 app.use(
   cors({
     credentials: true,
-    origin: ['http://localhost:3000', 'http://localhost:8081'] // web前端服务器地址
+    origin: ['http://localhost:3000', 'http://localhost:8081', 'http://localhost:8082'] // web前端服务器地址
   })
 )
 

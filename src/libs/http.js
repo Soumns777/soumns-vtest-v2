@@ -29,9 +29,6 @@ class RequestHttp {
       (config) => {
         // * 将当前请求添加到 pending 中
         axiosCanceler.addPending(config)
-        // showFullScreenLoading();
-        // const token: string = globalStore.token;
-        // return { ...config, headers: { 'x-access-token': token } };
         return { ...config }
       },
       (error) => {
@@ -48,27 +45,12 @@ class RequestHttp {
         const { data, config } = response
         // * 在请求结束后，移除本次请求
         axiosCanceler.removePending(config)
-        // tryHideFullScreenLoading();
-        // * 登陆失效（code == 599）
-        // if (data.code == ResultEnum.OVERDUE) {
-        //   ElMessage.error(data.msg);
-        //   // globalStore.setToken('');
-        //   // router.replace({
-        //   //   path: '/login',
-        //   // });
-        //   return Promise.reject(data);
-        // }
-        // * 全局错误信息拦截（防止下载文件得时候返回数据流，没有code，直接报错）
-        // if (data.code && data.code !== ResultEnum.SUCCESS) {
-        //   ElMessage.error(data.msg);
-        //   return Promise.reject(data);
-        // }
+
         // * 成功请求
         return data
       },
       async (error) => {
         const { response } = error
-        // tryHideFullScreenLoading();
         // 根据响应的错误状态码，做不同的处理
         if (response) return checkStatus(response.status)
         // 服务器结果都没有返回(可能服务器错误可能客户端断网)，断网处理:可以跳转到断网页面
