@@ -12,9 +12,7 @@
 
     <script>
       const { CancelToken, isCancel } = axios
-
       let cancal
-
       axios.interceptors.request.use((config) => {
         // 重复点击取消请求
         if (cancal) cancal('取消请求了!')
@@ -46,15 +44,7 @@
       ),
         // 点击事件
         (document.querySelector('button').onclick = async () => {
-          // const res = await axios({
-          //   url: 'http://localhost:3000/mock',
-          //   method: 'get',
-          //   params: {
-          //     user: 'iu',
-          //     age: 18
-          //   }
-          // })
-          const res = await axios.get('http://localhost:3000/mock')
+          const res = await axios.get('http://localhost:3002/mock')
           console.log(res, '💙💛 get data')
         })
     </script>
